@@ -1,7 +1,7 @@
 FROM node:18-alpine
 RUN apk add --no-cache openssl
 
-EXPOSE 58745
+EXPOSE 6571
 
 WORKDIR /app
 

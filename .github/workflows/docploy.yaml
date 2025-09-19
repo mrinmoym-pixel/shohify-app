@@ -9,7 +9,7 @@ jobs:
   deploy:
     name: Deploy app
     runs-on: ubuntu-latest
-    concurrency: deploy-group # optional: ensure only one action runs at a time
+    concurrency: deploy-group
     steps:
       - uses: actions/checkout@v4
 
@@ -23,11 +23,11 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build and push Docker image
-        run: docker buildx build --platform linux/amd64 -t soumeshkundu/gpt-description:latest --push .
+        run: docker buildx build --platform linux/amd64 -t ${{ secrets.DOCKER_USERNAME }}/shohify-app:latest --push .
 
       - name: Dokploy Deployment
         uses: Pukimaa/dokploy-deploy-action@2.1.0
         with:
-          APPLICATION_ID: 5kuBs3kk9P5P5ZymO-RhD
+          APPLICATION_ID: YKirYIMhzL_IagegMS2T2 # replace with your app's actual Application ID
           DOKPLOY_HOST: ${{ secrets.DOKPLOY_HOST }}
           DOKPLOY_TOKEN: ${{ secrets.DOKPLOY_TOKEN }}

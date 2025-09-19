@@ -28,6 +28,6 @@ jobs:
       - name: Dokploy Deployment
         uses: Pukimaa/dokploy-deploy-action@2.1.0
         with:
-          APPLICATION_ID: YKirYIMhzL_IagegMS2T2 # replace with your app's actual Application ID
+          APPLICATION_ID: YKirYIMhzL_IagegMS2T2
           DOKPLOY_HOST: ${{ secrets.DOKPLOY_HOST }}
           DOKPLOY_TOKEN: ${{ secrets.DOKPLOY_TOKEN }}

@@ -2,7 +2,7 @@
 
 client_id = "3f01ec63c663ff22ee288ab7e23e04f1"
 name = "adaptive-benchmark-app"
-application_url = "https://adaptive-benchmark-app.traefik.me/"
+application_url = "https://mrinmoy-test-app.clients-suntek.com"
 embedded = true
 
 [build]
@@ -24,4 +24,4 @@ api_version = "2025-10"
 scopes = "write_products"
 
 [auth]
-redirect_urls = [ "https://adaptive-benchmark-app.traefik.me/api/auth" ]
+redirect_urls = [ "https://mrinmoy-test-app.clients-suntek.com/api/auth" ]
